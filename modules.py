@@ -9,7 +9,7 @@ modules = [
         "ID": 2,
         "Title": "SSL Version 2 and 3 Protocol Detection",
         "Description": "Detect the SSL Version 2 and 3 Protocol Detection with testssl",
-        "os_code": "testssl -p {RHOST}:{RPORT} | grep -v '^ rDNS\|^ Service'"
+        "os_code": r"testssl -p {RHOST}:{RPORT} | grep -v '^ rDNS\|^ Service'"
     },
     {
         "ID": 3,
