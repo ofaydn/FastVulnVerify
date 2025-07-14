@@ -453,7 +453,7 @@ modules = [
         "ID": 76,
         "Title": "Atlassian Confluence Server Webwork OGNL Injection (CVE-2021-26084)",
         "Description": "Detect the Atlassian Confluence Server Webwork OGNL Injection (CVE-2021-26084)",
-        "os_code": "curl -L http://{RHOST}:{RPORT}/apex/f\?p\=4600:6:1982718168701680::::: | grep 'Application Express 4'"
+        "os_code": r"curl -L http://{RHOST}:{RPORT}/apex/f?p=4600:6:1982718168701680::::: | grep 'Application Express 4'"
     },
     {
         "ID": 77,
@@ -573,7 +573,7 @@ modules = [
         "ID": 96,
         "Title": "Apache Tomcat Version Based Vulnerabilities (Curl)",
         "Description": "Detect the Apache Tomcat Version with curl",
-        "os_code": "echo 'Target Adres: {RHOST}:{RPORT}' && curl 'http://{RHOST}:{RPORT}/non-exit-page' | lynx -dump -stdin | grep -v '^  %\|^    Dload\|^100'"
+        "os_code": r"echo 'Target Adres: {RHOST}:{RPORT}' && curl 'http://{RHOST}:{RPORT}/non-exit-page' | lynx -dump -stdin | grep -v '^  %\|^    Dload\|^100'"
     },
     {
         "ID": 97,
@@ -591,7 +591,7 @@ modules = [
         "ID": 99,
         "Title": "TLS Version 1.0 & TLS 1.1 Protocol Detection",
         "Description": "Detect the TLS Version 1.0 & TLS 1.1 Protocol Detection with testssl",
-        "os_code": "testssl -p {RHOST}:{RPORT} | grep -v '^ rDNS\|^ Service'"
+        "os_code": r"testssl -p {RHOST}:{RPORT} | grep -v '^ rDNS\|^ Service'"
     },
     {
         "ID": 100,
